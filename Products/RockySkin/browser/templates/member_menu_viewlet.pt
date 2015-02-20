@@ -1,0 +1,18 @@
+    <div id="portal-members"
+         tal:condition="view/isMember">
+      <ul id="portal-member-menu">
+        <tal:items tal:repeat="item view/getMenuItems">
+        <li>
+          <a href="#"
+             tal:condition="repeat/item/start"
+             tal:content="item/Title"
+             tal:attributes="href item/getURL;
+                             class string:list-start"></a>
+          <a href="#"
+             tal:condition="not:repeat/item/start"
+             tal:content="item/Title"
+             tal:attributes="href item/getURL"></a>
+        </li>
+        </tal:items>
+      </ul>
+    </div>

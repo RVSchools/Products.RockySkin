@@ -1,0 +1,24 @@
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+
+<p>
+    <span i18n:translate="description_copyright" tal:omit-tag="">
+    
+    Copyright <acronym title="Copyright" i18n:name="copyright" i18n:attributes="title title_copyright;">&copy;</acronym>
+    <span i18n:name="current_year"
+               tal:omit-tag=""
+               tal:define="now modules/DateTime/DateTime"
+               tal:content="now/year" />
+    </span>
+    Rocky View Schools, Airdrie, Alberta. All rights reserved.
+</p>
+<p>
+   <strong>Our Address:</strong> 2651 Chinook Winds Drive SW, Airdrie, AB, Canada T4B 0B4<br>
+   <strong>Our Telephone Number:</strong> (403)945-4000<br>
+</p>
+
+<p>
+    <a href="http://www.vurtur.com/"><img tal:attributes="src string:${context/@@plone_portal_state/portal_url}/plone-vurtur.gif" /></a>
+</p>
+
+</div>
+

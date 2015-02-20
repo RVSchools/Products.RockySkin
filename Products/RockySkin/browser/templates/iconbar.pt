@@ -1,0 +1,166 @@
+<div id="iconbar" tal:condition="view/get_icons">
+    <ul tal:define="icons view/get_icons;portal_url context/portal_url">
+	<li class="iconblock">
+            <a href="http://www.rockyview.ab.ca" title="Rocky View Corporate Site">
+                <img class="iconimage" alt="Rocky View Corporate Site"
+                     tal:attributes="src string:${portal_url}/RVS-site.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/twitter">
+            <a tal:attributes="href icons/twitter;" title="Twitter">
+                <img class="iconimage" alt="Twitter"
+                     tal:attributes="src string:${portal_url}/twitter.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/facebook">
+            <a tal:attributes="href icons/facebook;" title="Facebook">
+                <img class="iconimage" alt="Facebook"
+                     tal:attributes="src string:${portal_url}/facebook.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/cofp">
+            <a tal:attributes="href icons/cofp;" title="Communities of Practice">
+                <img class="iconimage" alt="Communities of Practice"
+                     tal:attributes="src string:${portal_url}/cofp.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/core">
+            <a tal:attributes="href icons/core;" title="CORE">
+                <img class="iconimage" alt="CORE"
+                     tal:attributes="src string:${portal_url}/CORE-badge.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/power_school">
+            <a tal:attributes="href icons/power_school;" title="Power School">
+                <img class="iconimage" alt="Power School"
+                     tal:attributes="src string:${portal_url}/powerschool2.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/school_cash_net">
+            <a tal:attributes="href icons/school_cash_net;" title="School Cash Net">
+                <img class="iconimage" alt="School Cash Net"
+                     tal:attributes="src string:${portal_url}/schoolcash.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/koha">
+            <a tal:attributes="href icons/koha;" title="Koha">
+                <img class="iconimage" alt="Koha"
+                     tal:attributes="src string:${portal_url}/koha.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/rvs_resource_collection">
+            <a tal:attributes="href icons/rvs_resource_collection;" title="RVS Resource Collection">
+                <img class="iconimage" alt="RVS Resource Collection"
+                     tal:attributes="src string:${portal_url}/RVS-ResCollect.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/groupwise">
+            <a tal:attributes="href icons/groupwise;" title="Groupwise">
+                <img class="iconimage" alt="Groupwise"
+                     tal:attributes="src string:${portal_url}/groupwise-badge.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/rvs_gmail">
+            <a tal:attributes="href icons/rvs_gmail;" title="RVS Gmail">
+                <img class="iconimage" alt="RVS Gmail"
+                     tal:attributes="src string:${portal_url}/RVSschools.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/google">
+            <a tal:attributes="href icons/google;" title="Google">
+                <img class="iconimage" alt="Google"
+                     tal:attributes="src string:${portal_url}/google.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/moodle">
+            <a tal:attributes="href icons/moodle;" title="Moodle">
+                <img class="iconimage" alt="Moodle"
+                     tal:attributes="src string:${portal_url}/Moodle.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/moodle_hub">
+            <a tal:attributes="href icons/moodle_hub;" title="Moodle Hub">
+                <img class="iconimage" alt="Moodle Hub"
+                     tal:attributes="src string:${portal_url}/Moodle-hub.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/mahara">
+            <a tal:attributes="href icons/mahara;" title="Mahara">
+                <img class="iconimage" alt="Mahara"
+                     tal:attributes="src string:${portal_url}/Mahara.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/epearl">
+            <a tal:attributes="href icons/epearl;" title="Epearl">
+                <img class="iconimage" alt="Epearl"
+                     tal:attributes="src string:${portal_url}/ePearl.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/blogs">
+            <a tal:attributes="href icons/blogs;" title="RVS Blogs">
+                <img class="iconimage" alt="RVS Blogs"
+                     tal:attributes="src string:${portal_url}/RVSblogs.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/student_blogs">
+            <a tal:attributes="href icons/student_blogs;" title="Student Blogs">
+                <img class="iconimage" alt="Student Blogs"
+                     tal:attributes="src string:${portal_url}/student-blog.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/wiki">
+            <a tal:attributes="href icons/wiki;" title="Wikis">
+                <img class="iconimage" alt="Wikis"
+                     tal:attributes="src string:${portal_url}/Wikis.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/youtube">
+            <a tal:attributes="href icons/youtube;" title="YouTube">
+                <img class="iconimage" alt="YouTube"
+                     tal:attributes="src string:${portal_url}/you-tube.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/elluminate">
+            <a tal:attributes="href icons/elluminate;" title="Elluminate">
+                <img class="iconimage" alt="Elluminate"
+                     tal:attributes="src string:${portal_url}/Elluminate.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/d2l">
+            <a tal:attributes="href icons/d2l;" title="D2L">
+                <img class="iconimage" alt="D2L"
+                     tal:attributes="src string:${portal_url}/D2L.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/rvs_live_streaming">
+            <a tal:attributes="href icons/rvs_live_streaming;" title="RVS Live Streaming">
+                <img class="iconimage" alt="RVS Live Streaming"
+                     tal:attributes="src string:${portal_url}/RVS-tube.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/rss">
+            <a tal:attributes="href icons/rss;" title="RSS">
+                <img class="iconimage" alt="RSS"
+                     tal:attributes="src string:${portal_url}/RSS.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/tech_support">
+            <a tal:attributes="href icons/tech_support;" title="Tech Support">
+                <img class="iconimage" alt="Tech Support"
+                     tal:attributes="src string:${portal_url}/tech-support.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/donations">
+            <a tal:attributes="href icons/donations;" title="Donations">
+                <img class="iconimage" alt="Donations"
+                     tal:attributes="src string:${portal_url}/donations.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/network">
+            <a tal:attributes="href icons/network;" title="netWORK">
+                <img class="iconimage" alt="netWORK"
+                     tal:attributes="src string:${portal_url}/netWORK.png">
+            </a>
+        </li>
+    </ul>
+</div>

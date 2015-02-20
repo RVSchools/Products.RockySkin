@@ -1,0 +1,139 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="rockyskin">
+
+    <!-- "RockySkin" Zope 3 skin layer.
+         Register views, viewlets and resources for this layer to make sure
+         they only apply to the 'RockySkin' theme.
+         You can also use this layer to override default Plone browser views
+         and viewlets only within the 'RockySkin' theme.
+      -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="RockySkin"
+        />
+
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="rockyskin.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for images -->
+    <browser:resourceDirectory
+        name="rockyskin.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Resource directory for scripts -->
+    <browser:resourceDirectory
+        name="rockyskin.scripts"
+        directory="scripts"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- Configlet page for icon bar -->
+    <browser:page
+        for="Products.CMFPlone.Portal.PloneSite"
+        name="iconbar-configuration"
+        class=".iconbar.IconbarConfigurationForm"
+        permission="cmf.ManagePortal"
+        />
+
+    <!-- Custom viewlets -->
+    <browser:viewlet
+        name="rockyskin.member_menu"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.MemberMenu"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+    <browser:viewlet
+        name="rockyskin.iconbar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.IconBar"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+    <browser:viewlet
+        name="rockyskin.topimage"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        template="templates/topimage.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
+    <!-- Re-register a couple plone viewlets under our skin layer...-->
+    <browser:viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.LogoViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+    <browser:viewlet
+        name="plone.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+    <browser:viewlet
+        name="plone.site_actions"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+    <browser:viewlet
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+    <browser:viewlet
+        name="plone.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        template="templates/personal_bar.pt"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- The customized footer -->
+    <browser:viewlet
+	name="plone.footer"
+   	for="*"
+   	manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+   	layer=".interfaces.IThemeSpecific"
+   	template="templates/footer.pt"
+   	permission="zope.Public"
+   	/>
+
+    <!-- Attempting to hijack the top tabs code... -->
+    <browser:page
+        for="*"
+        name="portal_tabs_view"
+        class=".navigation.CatalogNavigationTabs"
+        permission="zope.Public"
+        allowed_attributes="topLevelTabs"
+        layer=".interfaces.IThemeSpecific"
+        />
+        
+
+    <!-- Override the RSS portlet renderer to use the feed url for 'more' -->
+    <include package="plone.app.portlets" />
+    <plone:portletRenderer
+      portlet="plone.app.portlets.portlets.rss.IRSSPortlet"
+      class=".portlets.RockySkinRSSRenderer"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+
+</configure>

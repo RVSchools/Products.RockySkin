@@ -1,0 +1,47 @@
+title:string=RockySkin's color, font, logo and border defaults
+
+plone_skin:string=RockySkin
+
+logoName:string=logo.jpg
+
+fontFamily:string="Trebuchet MS", Arial, Verdana, Lucida, Helvetica, sans-serif
+fontBaseSize:string=75%
+fontColor:string=#595959
+fontSmallSize:string=90%
+
+backgroundColor:string=White
+
+linkColor:string=#16969F
+linkActiveColor:string=#066AA9
+linkVisitedColor:string=#066AA9
+
+borderWidth:string=1px
+borderStyle:string=solid
+borderStyleAnnotations:string=dashed
+
+globalBorderColor:string=#AECBD7
+globalBackgroundColor:string=#DEE7EC
+globalFontColor:string=#E3E3E3
+
+headingFontFamily:string="Trebuchet MS", Arial, Verdana, Lucida, Helvetica, sans-serif
+
+contentViewBorderColor:string=#74ae0b
+contentViewBackgroundColor:string=#cde2a7
+contentViewFontColor:string=#578308
+
+inputFontColor:string=#595959
+
+textTransform:string=lowercase
+
+evenRowBackgroundColor:string=#eef3f5 
+oddRowBackgroundColor:string=transparent
+
+notifyBorderColor:string=#ffa500
+notifyBackgroundColor:string=#ffce7b
+
+discreetColor:string=#76797c
+helpBackgroundColor:string=#ffffe1
+
+portalMinWidth:string=66em
+columnOneWidth:string=20em
+columnTwoWidth:string=16em

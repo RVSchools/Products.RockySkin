@@ -1,0 +1,608 @@
+/*
+  This file is based on the ploneCustom.css.dtml shipped with Plone.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+/*
+a:visited {
+    color:#999;
+}
+a img {border:0px;}
+a:hover {
+    color:#066AA9;
+}
+*/
+a {
+    color:#066AA9;
+}
+
+/* CUSTOM WORKFFLOW COLOURS */
+.state-all_users, 
+.state-all_users:visited,
+.navTreeItem .state-all_users:visited,
+.state-public,
+.state-public:visited,
+.navTreeItem .state-public {
+    color:#066AA9;
+}
+.state-members,
+.state-members:visited {
+    color:#578308;
+}
+.navTreeItem .state-members:visited {
+    color:#FFF !important;
+}
+.navTreeItem .state-members {
+    color:#FFF !important;
+    background-color:#8CC63F;
+}
+dd.portletItem .navTreeItem a.state-members:hover {
+    color:#FFF;
+    /*background-color:#8CC63F;*/
+    background:#8CC63F url(&dtml-portal_url;/bg-member-sub-menu-hover.gif) repeat-y 0px 0px;
+}
+
+.state-internal,
+.navTreeItem .state-internal:visited,
+.state-draft_public, 
+.state-draft_members,
+.navTreeItem .state-draft_public:visited,
+.navTreeItem .state-draft_members:visited {
+    color:#74AE0B;
+}
+.state-pending_members, .state-pending_public,
+.state-pending_public:visited, .state-pending_members:visited {
+    color:#FFA500;
+}
+
+body {
+	background:#FFF url(bg-top.gif) repeat-x 0px 0px; 
+}
+
+code, pre {
+    color:#004080;
+}
+
+h3 {
+    color:#2B7FB1;
+}
+
+#wing-wrapper {
+    background: transparent url(&dtml-portal_url;/bg-footer.gif) repeat-x left bottom;
+}
+
+#wing-left {
+    background: transparent url(&dtml-portal_url;/left-wing.gif) no-repeat right 50px;
+}
+
+#wing-right {
+    background: transparent url(&dtml-portal_url;/right-wing.gif) no-repeat left 50px;
+}
+
+#content dl {
+    border:1px solid #DEE7EC;
+    height:200px;
+    padding:1em;
+    overflow:auto;
+}
+
+#visual-portal-wrapper {
+    background-color:#FFF;
+	margin:auto;
+	width:1000px;
+}
+
+#portal-column-content,
+#portal-column-left {
+    padding-top:0em;
+}
+
+#portal-header {
+z-index:1;
+	padding:0pt 0px; 
+	height:50px;
+width:100%;
+	position:relative; 
+	background:#2a6d29 url(&dtml-portal_url;/bg-siteactions.gif) no-repeat bottom center;
+}
+#portal-siteactions {
+	float:left;
+	margin:5px 0px 0px 20px;
+}
+#portal-siteactions li {
+	display:inline;
+	padding:5px;
+}
+
+#portal-siteactions li a {
+border:0px;
+text-transform:none;
+	color:#8cc63f;
+	text-decoration:none;
+	border-bottom:1px solid #369435;
+}
+#portal-siteactions li a:hover {
+background-color:transparent;
+border:0px;
+	color:#8cc63f;
+	border-bottom:2px solid #fff;
+}
+
+/*#portal-logo {
+    background: url(&dtml-portal_url;/&dtml-logo;) no-repeat;
+    border: 0;
+    margin: 0.75em 0em 0.75em 0em;
+    padding: 0;
+}*/
+#portal-logo a,
+#portal-logo img {
+z-index:3;
+}
+
+#portal-globalnav {
+    background-color:#00659C;
+    border-bottom:1px solid #FFF;
+    padding:0.3em 1em;
+white-space:normal;
+z-index:1;
+}
+
+#portal-globalnav li a {
+    border:0px solid transparent;
+    border-left:1px solid #6BCBF2;
+    font-weight:bold;
+    padding:0px 0.5em 0px 1em;
+    text-transform:none;
+}
+
+#portal-globalnav li a:hover {
+/*    border:0px solid transparent;*/
+    background-color:#00659C;
+    border-left:1px solid #6BCBF2;
+    color:#6BCBF2;
+}
+
+#portal-globalnav li#portaltab-schools a {
+    border-left:0px solid transparent;
+}
+
+#portal-globalnav li.selected a {
+background-color:#00659C;
+border:0px solid transparent;
+    border-left:1px solid #6BCBF2;
+    color:#6BCBF2;
+}
+
+#portal-members {
+    background-color:#8CC63F;
+    border-top:3px solid #46631F;
+    margin:0px;
+    padding:0.3em 1em;
+    /*padding-left:2em;*/
+}
+
+#portal-member-menu {
+    /*background-color:#8CC63F;
+    border-top:3px solid #46631F;*/
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+}
+
+#portal-member-menu li {
+    display:inline;
+    font-weight:bold;
+}
+
+#portal-member-menu a {
+    border-left:1px solid #77B800;
+    color:#FFF;
+    padding:0em 1em;
+    text-decoration:none;
+}
+
+#portal-member-menu li a.list-start {
+    border-left:0px solid transparent;
+}
+
+#portal-member-menu a:hover {
+    color:#46631F;
+}
+
+#portal-personaltools {
+background-color:transparent;
+border:0px solid transparent;
+    float:right;
+    width:275px;
+}
+
+#portal-personaltools li a,
+#portal-personaltools li a:visited {
+    color:#40A12E;
+    text-decoration:underline;
+}
+
+#portal-personaltools a:hover {
+    color:#8CC63F;
+}
+
+#portal-breadcrumbs {
+    background-color:#FFF;
+    border:0px solid transparent;
+float:left;
+width:600px;
+}
+
+#portal-logo img {
+padding:0px;
+margin:0px;
+}
+
+#portal-columns {
+background-color:#FFF;
+}
+
+.portlet {
+    border-bottom:0px solid transparent;
+}
+
+.portletHeader {
+    border:0px solid transparent;
+    font-weight:bold;
+    line-height:3.0em;
+    vertical-align:baseline;
+	background:#fff url(&dtml-portal_url;/bg-portlet-header.gif) no-repeat 0 0;
+	height:38px;
+	color:#fff;
+    text-transform:uppercase;
+}
+
+.portletHeader a,
+.weekdays {
+    color:#FFF !important;
+}
+.ploneCalendar .weekdays th {
+    background-color:#00659C;
+}
+
+.portletItem {
+    background-color:#EBF3F8;
+    border:0px solid transparent;
+}
+
+.portletFooter {
+    border-left:0px solid transparent;
+    border-right:0px solid transparent;
+}
+
+.portletLogin .portletHeader {
+    background:#FFF url(&dtml-portal_url;/bg-portlet-header2.gif) no-repeat 0 0;
+}
+.portletLogin .portletItem {
+    background-color:#8CC63F;
+}
+
+/*
+.portletLogin .portletItem .context {
+    color:#2A6D29;
+}
+*/
+
+.portletLogin .portletItem a,
+.portletLogin .portletItem a:hover {
+    color:#FFF;
+}
+
+.portletLogin .portletItem .context {
+    background-color:#2A6D29;
+    border-color:#5E905D;
+    color:#FFF;
+}
+
+.portletLogin .field label {
+    color:#2A6D29;
+}
+
+.portletLogin .portletItem .field input#__ac_name,
+.portletLogin .portletItem .field input#__ac_password {
+    background-image:none;
+    background-color:#FFF !important;
+    color:#2A6D29 !important;
+    width:10em;
+}
+
+.portletNavigationTree .portletItem {
+/*.portletItem {*/
+/*    background-color:#EBF3F8;
+    border:0px solid transparent;*/
+    padding:0px;
+}
+
+/*.portletNavigationTree .portletItem ul.navTree {
+    list-style-type:disc !important;
+    list-style-image:url(&dtml-portal_url;/li-light-green.gif) !important;
+}*/
+
+.navTreeItem a, dd.portletItem .navTreeItem a {
+    border:0px solid transparent;
+    border-bottom:1px solid #C3DBEB;
+    color:#004080;
+    padding-left:1.0em;
+}
+
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
+    background:#ebf3f8 url(&dtml-portal_url;/bg-nav-hover.gif) repeat-y 0 0;
+    border:0px solid transparent;
+    border-bottom:1px solid #C3DBEB;
+    color:#004080;
+}
+
+dd.lastItem {
+    border:0px solid transparent;
+}
+
+/*
+.portletWorkflowReview {
+    color:#E3AF43;
+    color:#FFA500;
+}
+*/
+.portletWorkflowReview .portletHeader {
+    background:#E3AF43 url(&dtml-portal_url;/bg-reviewer.gif) no-repeat 0 0;
+}
+.portletWorkflowReview .portletItem {
+    background-color:#F7F7F7;
+    color:#FFA500;
+}
+.portletWorkflowReview .portletItemDetails,
+.portletWorkflowReview .portletItem a {
+    color:#FFA500;
+}
+
+.documentFirstHeading {
+	font-size:180%;
+	font-family: "Trebuchet MS";
+	color:#666666;
+	font-weight:200;
+	border-bottom:1px dotted #ccc;
+	padding:5px 5px 5px 0px;
+	/*letter-spacing:-2px;*/
+}
+
+#portal-footer {
+background-color:#FFF;
+border:0px;
+text-align:left;
+	height:60px;
+	font-size:80%;
+/*margin:px 0px 20px 0px;*/
+	padding:10px 10px 10px 20px;
+	border-top:1px dotted #999;
+}
+
+#portal-colophon {
+    display:none;
+}
+
+
+/* Searchbox style and positioning */
+
+#portal-searchbox {
+    float: right;
+    clear: right;
+    background-color: transparent;
+    margin: 3px 0 0 0;
+    padding: 0px;
+    text-align: left;
+    text-transform: lowercase;
+    white-space: nowrap;
+    z-index: 2;
+}
+#portal-advanced-search {
+    margin-top: 0.2em;
+    clear: both;
+}
+#portal-advanced-search a {
+    color: #76797c;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+/* Search results elements */
+
+dl.searchResults dt {
+    font-size: 140%;
+    font-weight: normal;
+z-index:2;
+}
+
+form.searchPage {
+    text-align: center;
+}
+
+input.searchPage {
+    font-size: 200% !important;
+}
+
+form.searchPage input.searchButton {
+    /*background-position:5px 7px;*/
+    background-image:none;
+    border:1px solid #333;
+    font-size:100% !important;
+    padding:1px 10px 1px 25px;
+width:auto;
+}
+
+/* LiveSearch styles */
+.LSRes {
+    font-family:  Trebuchet MS, Arial, Verdana, Lucida, Helvetica, Arial, sans-serif;
+    visibility: visible;
+    color: #545454;
+    background-color: red;
+    vertical-align: middle;
+    display:block;
+    list-style-image: none;
+    list-style-type: none;
+    text-align: left;
+    min-width: 16.5em;
+    text-transform: none;
+    margin-left: 0;
+    line-height: 1.1em;
+z-index:3000;
+}
+#LSHighlight,
+.LSHighlight {
+    background-color: #DDDDDD;
+    border: 1px solid #EEE;
+    color: #545454;
+}
+.LSRow {
+    border: 1px solid White;
+    white-space: normal;
+    padding:0;
+    margin: 0;
+    list-style-image: none;
+    list-style-type: none;
+}
+.LSRow a {
+    text-decoration: none;
+    font-weight:bold;
+    white-space:nowrap
+}
+.LSDescr {
+    color: #76797c;
+    text-transform: lowercase;
+    padding-left:2.1em;
+    margin-top:-0.1em;
+}
+.LSResult {
+    position: relative;
+    display: block;
+    text-align: right;
+    padding-top: 5px;
+    margin: 0;
+    left: 3px;
+z-index: 3000;
+}
+.LSShadow {
+    position: relative;
+    text-align: right;
+z-index:3000;
+}
+.livesearchContainer {
+    background-color: White;
+    margin-top: 0;
+    padding: 0 !important;
+    position: absolute;
+    right: 0px;
+    /* Currently exposes a rendering bug in Mozilla */
+    top: 0;
+    white-space: normal;
+    font-family:  Trebuchet MS, Arial, Verdana, Lucida, Helvetica, Arial, sans-serif;
+    visibility: visible;
+    text-align: left;
+    color: #545454;
+    border: 1px solid #EEE;
+    width: 30em;
+    text-transform: none;
+margin-right:5em;
+z-index:3000;
+}
+* html .livesearchContainer {
+    padding: 1px !important;
+    padding-top: 0 !important;
+    background-color: #EEE;
+    border: 0;
+z-index:3000;
+}
+#livesearchLegend {
+    line-height: 1em;
+    margin-top: -2em;
+    margin-left: -0.1em;
+    border: 1px solid #EEE;
+    border-bottom: 0;
+}
+* html #livesearchLegend {
+    margin-top: -1.9em;
+    margin-left: -8px;
+    position: relative;
+}
+
+/* Workaround for Internet Explorer's broken z-index implementation */
+.LSIEFix {
+    background-color: White;
+    padding: 0.5em !important;
+    z-index: 20;
+}
+.LSBox {
+    clear: left;
+    float: left;
+    text-align: right;
+    padding-right: 1px;
+    display:block;
+z-index:3000;
+}
+#LSNothingFound {
+    text-align: center;
+    padding: 2px;
+}
+.LSBox label {
+    font-weight: normal;
+}
+
+input.searchButton {
+border:0px;
+    margin-bottom: 1px !important;
+    background: url(&dtml-portal_url;/go.gif) 0px 5px no-repeat;
+    padding:7px 7px 7px 5px;
+    cursor: pointer;
+    width:54px;
+}
+
+.searchSection {
+    color: #76797c;
+    margin-top: 0.1em;
+margin-bottom:0.5em;
+    text-align:left;
+}
+.searchSection label {
+    color:#8CC63F;
+}
+.searchSection label:hover {
+    color: #FFF;
+}
+
+.LSBox {
+    clear: left;
+    float: left;
+    text-align: right;
+    padding-right: 1px;
+    display:block;
+}
+#LSNothingFound {
+    text-align: center;
+    padding: 2px;
+}
+.LSBox label {
+    font-weight: normal;
+}
+
+#searchGadget {
+    visibility: visible;
+    color: #fff;
+    vertical-align: middle;
+    background: #5e905d;
+    border:0px;
+}
+
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone 
+   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
