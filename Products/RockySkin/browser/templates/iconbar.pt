@@ -162,5 +162,11 @@
                      tal:attributes="src string:${portal_url}/netWORK.png">
             </a>
         </li>
+        <li class="iconblock" tal:condition="icons/learning_visible">
+            <a tal:attributes="href icons/learning_visible;" title="Making Learning Visible">
+                <img class="iconimage" alt="Making Learning Visible"
+                     tal:attributes="src string:${portal_url}/making-learning-visible.png">
+            </a>
+        </li>
     </ul>
 </div>

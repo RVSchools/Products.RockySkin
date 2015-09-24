@@ -90,4 +90,7 @@ class IIconbarConfiguration(Interface):
     network = schema.TextLine(title=u"netWORK",
                               required=False,
                                           default=u"")
+    learning_visible = schema.TextLine(title=u"Making Learning Visible",
+                              required=False,
+                                default=u"http://schoolblogs.rockyview.ab.ca/makinglearningvisible/")
 
