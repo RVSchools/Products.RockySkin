@@ -135,5 +135,11 @@
       layer=".interfaces.IThemeSpecific"
       />
 
+    <plone:portletRenderer
+      portlet="plone.app.portlets.portlets.login.ILoginPortlet"
+      template="templates/login.pt"
+      layer=".interfaces.IThemeSpecific"
+      />
+
 
 </configure>
