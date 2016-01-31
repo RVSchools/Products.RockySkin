@@ -168,5 +168,11 @@
                      tal:attributes="src string:${portal_url}/making-learning-visible.png">
             </a>
         </li>
+        <li class="iconblock" tal:condition="icons/outlook_exchange">
+            <a tal:attributes="href icons/outlook_exchange;" title="Outlook Exchange">
+                <img class="iconimage" alt="Outlook Exchange"
+                     tal:attributes="src string:${portal_url}/outlook-exchange.png">
+            </a>
+        </li>
     </ul>
 </div>

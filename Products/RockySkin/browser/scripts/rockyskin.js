@@ -3,7 +3,7 @@ var rvs_collection_loader;
 rvsCollectionResizer = function () {
   'use strict';
   var column, ctop, cheight, collection, newheight, listing, lheight,
-      actions, aheight;
+      actions, aheight, whatsnew;
   lheight = aheight = 0;
   if ($('body.portaltype-topic').length > 0) {
       // calculate the distance from the top of the page to the bottom of the
@@ -18,6 +18,7 @@ rvsCollectionResizer = function () {
           if (collection.length > 0) {
               listing = $('div#content-core div.listingBar');
               actions = $('div.documentActions');
+              whatsnew = $('#parent-fieldname-text');
               if (listing.length > 0) {
                   lheight = listing.height();
               }
@@ -27,10 +28,10 @@ rvsCollectionResizer = function () {
               // new height = total column height - top of collection - height of elements below collection
               newheight = ((ctop + cheight) - collection.offset().top - (lheight + aheight));
               // on the off chance that the difference ends up being too small, 
-              // default to the former height.  This is better that ending up with 
+              // just guess height of twitter portlet.  This is better that ending up with 
               // a negatively-sized element, or one too small to see anything.
-              if (newheight < 200) {
-                  newheight = 200;
+              if (newheight < 300) {
+                  newheight = cheight + 462 - whatsnew.height();
               }
               collection.height(newheight);
           }

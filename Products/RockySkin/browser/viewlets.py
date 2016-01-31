@@ -14,6 +14,14 @@ class MemberMenu(ViewletBase):
     def isMember(self):
         # flag to indicate if user is a member
         return not self.context.portal_membership.isAnonymousUser()
+
+    def getNewMenuItems(self):
+        results = []
+        try:
+            results = self.context.get_menu_items_from_skin()
+        except:
+            pass
+        return results
         
     def getMenuItems(self):
         #path = '/'.join(self.context.getPhysicalPath())
@@ -28,10 +36,15 @@ class MemberMenu(ViewletBase):
         path = '/%s' % root.getId()
         
         cat = self.context.portal_catalog
-        return cat.searchResults(review_state='members',
+        res = cat.searchResults(review_state='members',
                                  path={'query':path, 'depth':1},
                                  sort_on='getObjPositionInParent'
                                  )
+
+        root_ppath = root.getPhysicalPath()
+        cat = self.context.portal_catalog
+        results = cat.searchResults(path={'query':root_ppath, 'depth':1})
+        return [x for x in results if x.review_state=='members']
 
 class IconBar(ViewletBase):
     render = ViewPageTemplateFile('templates/iconbar.pt')

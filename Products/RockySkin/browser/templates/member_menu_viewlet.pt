@@ -1,5 +1,5 @@
     <div id="portal-members"
-         tal:condition="view/isMember">
+         tal:condition="not: context/portal_membership/isAnonymousUser">
       <ul id="portal-member-menu">
         <tal:items tal:repeat="item view/getMenuItems">
         <li>
