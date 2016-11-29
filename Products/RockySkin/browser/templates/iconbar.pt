@@ -30,6 +30,12 @@
                      tal:attributes="src string:${portal_url}/CORE-badge.png">
             </a>
         </li>
+	<li class="iconblock" tal:condition="icons/my_blueprint">
+            <a tal:attributes="href icons/my_blueprint;" title="My Blueprint">
+                <img class="iconimage" alt="My Blueprint"
+                     tal:attributes="src string:${portal_url}/my-blueprint.png">
+            </a>
+        </li>
 	<li class="iconblock" tal:condition="icons/power_school">
             <a tal:attributes="href icons/power_school;" title="Power School">
                 <img class="iconimage" alt="Power School"
@@ -58,6 +64,12 @@
             <a tal:attributes="href icons/groupwise;" title="Groupwise">
                 <img class="iconimage" alt="Groupwise"
                      tal:attributes="src string:${portal_url}/groupwise-badge.png">
+            </a>
+        </li>
+	<li class="iconblock" tal:condition="icons/atrieve">
+            <a tal:attributes="href icons/groupwise;" title="Atrieve">
+                <img class="iconimage" alt="Atrieve"
+                     tal:attributes="src string:${portal_url}/atrieve.png">
             </a>
         </li>
 	<li class="iconblock" tal:condition="icons/rvs_gmail">

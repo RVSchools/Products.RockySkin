@@ -24,6 +24,9 @@ class IIconbarConfiguration(Interface):
     core = schema.TextLine(title=u"CORE",
                               required=False,
                                default=u"")
+    my_blueprint = schema.TextLine(title=u"My Blueprint",
+                              required=False,
+                               default=u"")
     power_school = schema.TextLine(title=u"Power School",
                               required=False,
                                               default=u"")
@@ -37,6 +40,9 @@ class IIconbarConfiguration(Interface):
                               required=False,
                                               default=u"")
     groupwise = schema.TextLine(title=u"Groupwise",
+                              required=False,
+                                              default=u"")
+    atrieve = schema.TextLine(title=u"Atrieve",
                               required=False,
                                               default=u"")
     rvs_gmail = schema.TextLine(title=u"RVS Gmail",
