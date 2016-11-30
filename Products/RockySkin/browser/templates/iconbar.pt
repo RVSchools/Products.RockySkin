@@ -67,7 +67,7 @@
             </a>
         </li>
 	<li class="iconblock" tal:condition="icons/atrieve">
-            <a tal:attributes="href icons/groupwise;" title="Atrieve">
+            <a tal:attributes="href icons/atrieve;" title="Atrieve">
                 <img class="iconimage" alt="Atrieve"
                      tal:attributes="src string:${portal_url}/atrieve.png">
             </a>
