@@ -8,7 +8,7 @@ from OFS.SimpleItem import SimpleItem
 
 class IconbarConfiguration(SimpleItem):
     implements(IIconbarConfiguration)
-    
+
     twitter = FieldProperty(IIconbarConfiguration['twitter'])
     facebook = FieldProperty(IIconbarConfiguration['facebook'])
     cofp = FieldProperty(IIconbarConfiguration['cofp'])
@@ -18,8 +18,8 @@ class IconbarConfiguration(SimpleItem):
     school_cash_net = FieldProperty(IIconbarConfiguration['school_cash_net'])
     koha = FieldProperty(IIconbarConfiguration['koha'])
     rvs_resource_collection = FieldProperty(IIconbarConfiguration['rvs_resource_collection'])
-    groupwise = FieldProperty(IIconbarConfiguration['groupwise'])
     atrieve  = FieldProperty(IIconbarConfiguration['atrieve'])
+    papercut = FieldProperty(IIconbarConfiguration['papercut'])
     rvs_gmail = FieldProperty(IIconbarConfiguration['rvs_gmail'])
     google = FieldProperty(IIconbarConfiguration['google'])
     moodle = FieldProperty(IIconbarConfiguration['moodle'])

@@ -60,10 +60,10 @@
                      tal:attributes="src string:${portal_url}/RVS-ResCollect.png">
             </a>
         </li>
-	<li class="iconblock" tal:condition="icons/groupwise">
-            <a tal:attributes="href icons/groupwise;" title="Groupwise">
-                <img class="iconimage" alt="Groupwise"
-                     tal:attributes="src string:${portal_url}/groupwise-badge.png">
+	<li class="iconblock" tal:condition="icons/papercut">
+            <a tal:attributes="href icons/papercut;" title="PaperCut">
+                <img class="iconimage" alt="PaperCut"
+                     tal:attributes="src string:${portal_url}/papercut-badge.png">
             </a>
         </li>
 	<li class="iconblock" tal:condition="icons/atrieve">
