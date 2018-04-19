@@ -100,7 +100,7 @@ class IIconbarConfiguration(Interface):
                               required=False,
                                 default=u"http://schoolblogs.rockyview.ab.ca/makinglearningvisible/")
 
-    outlook_exchange = schema.TextLine(title=u"Outlook Exchange",
+    office365 = schema.TextLine(title=u"Office 365",
                               required=False,
-                              default=u"https://outlook.office365.com/")
+                              default=u"")
 
